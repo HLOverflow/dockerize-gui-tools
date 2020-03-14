@@ -1,8 +1,9 @@
 #!/bin/bash
+echo "$(pwd) is mapped to /mnt"
 docker run -ti --rm \
        -e DISPLAY=$DISPLAY \
        -v /tmp/.X11-unix:/tmp/.X11-unix \
-       -v $(pwd):/tmp/ \
-       -w /tmp/ \
+       -v $(pwd):/mnt/ \
+       -w /mnt/ \
        --volume=/run/user/$USER_UID/pulse:/run/pulse:ro \
        charles-proxy charles "$@"
