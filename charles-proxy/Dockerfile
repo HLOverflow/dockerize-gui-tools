@@ -1,4 +1,8 @@
 FROM ubuntu
+ARG myuid
+ARG mygid
+ARG myuser
+ARG myhome
 COPY ./init.sh /init.sh 
 RUN chmod +x /init.sh
 RUN /init.sh ${myuid} ${mygid} ${myuser} ${myhome}

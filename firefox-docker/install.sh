@@ -5,4 +5,4 @@ docker image build -t firefox \
 	--build-arg myuser=`whoami` \
 	--build-arg myhome=$HOME \
 	. && \
-ln -s $(pwd)/firefox.sh /usr/bin/firefox-docker
+sudo ln -s $(pwd)/firefox.sh /usr/bin/firefox-docker

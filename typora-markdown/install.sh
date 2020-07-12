@@ -5,4 +5,4 @@ docker image build -t typora-markdown \
 	--build-arg myuser=`whoami` \
 	--build-arg myhome=$HOME \
 	. && \
-ln -s $(pwd)/typora-markdown.sh /usr/bin/typora-markdown-docker
+sudo ln -s $(pwd)/typora-markdown.sh /usr/bin/typora-markdown-docker

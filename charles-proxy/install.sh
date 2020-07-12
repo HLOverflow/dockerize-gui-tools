@@ -5,4 +5,4 @@ docker image build -t charles-proxy \
 	--build-arg myuser=`whoami` \
 	--build-arg myhome=$HOME \
 	. && \
-ln -s $(pwd)/charles-proxy.sh /usr/bin/charles-proxy-docker
+sudo ln -s $(pwd)/charles-proxy.sh /usr/bin/charles-proxy-docker
